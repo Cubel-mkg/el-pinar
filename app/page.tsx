@@ -211,25 +211,23 @@ export default function ElPinarLandingPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-12">
                 <motion.div
-                  className="w-full"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="w-full max-w-5xl mx-auto"
+                  initial={{ opacity: 0, y: -30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
+                  
                   <div className="bg-white rounded-lg p-2 shadow-lg">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3305.2670973659424!2d-59.21133330000001!3d-34.0626667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDAzJzQ1LjYiUyA1OcKwMTInNDAuOCJX!5e0!3m2!1ses!2sar!4v1753973276895!5m2!1ses!2sar"
-                      width="100%"
-                      height="450"
-                      style={{ border: 0 }}
-                      allowFullScreen={true}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="w-full h-64 md:h-72 lg:h-80 rounded"
-                    />
+                                <Image
+                                  src="/PLANITOs_Brochure_ElPinar-5.png"
+                                  alt="Masterplan Barrio Abierto El Pinar"
+                                  width={600}
+                                  height={400}
+                                  className="w-full h-auto rounded"
+                                />
                   </div>
                   <div className="flex gap-4 mt-4">
                     <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -243,24 +241,23 @@ export default function ElPinarLandingPage() {
                       </Button>
                     </motion.div>
                     <motion.div className="flex-1" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <Button variant="outline" className="w-full bg-transparent">
-                        <Download className="h-4 w-4 mr-2" />
-                        Descargar PDF
-                      </Button>
+                        <a href="/Brochure/El Pinar_Brochure de desarrollo_VF.pdf" download>
+                          <Button variant="outline" className="w-full bg-transparent">
+                            <Download className="h-4 w-4 mr-2" />
+                            Descargar PDF
+                          </Button>
+                        </a>
                     </motion.div>
                   </div>
                 </motion.div>
 
-                <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <div>
-                    <h3 className="font-serif text-2xl font-bold text-brand-brown mb-4">¿Qué hace único a El Pinar?</h3>
-                    <StaggeredList className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white rounded-xl p-8 shadow-lg border border-brand-clay/10">
+                    <h3 className="font-serif text-2xl font-bold text-brand-brown mb-6 flex items-center gap-3">
+                      <div className="w-2 h-8 bg-brand-olive rounded-full"></div>
+                      ¿Qué hace único a El Pinar?
+                    </h3>
+                    <StaggeredList className="space-y-4">
                       {[
                         "60 lotes de 950 m²",
                         "Calles mejoradas con cordón cuneta",
@@ -268,10 +265,15 @@ export default function ElPinarLandingPage() {
                         "Acceso controlado",
                         "Reserva natural alrededor",
                       ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <Badge className="bg-brand-olive/10 text-brand-olive">✓</Badge>
-                          <span>
-                            <strong>
+                        <div
+                          key={index}
+                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-sand/30 transition-colors duration-200"
+                        >
+                          <div className="flex-shrink-0 w-6 h-6 bg-brand-olive/10 rounded-full flex items-center justify-center mt-0.5">
+                            <div className="w-2 h-2 bg-brand-olive rounded-full"></div>
+                          </div>
+                          <span className="text-brand-soft-black leading-relaxed">
+                            <strong className="text-brand-brown">
                               {item.split(" ")[0]} {item.split(" ")[1]}
                             </strong>{" "}
                             {item.split(" ").slice(2).join(" ")}
@@ -282,18 +284,34 @@ export default function ElPinarLandingPage() {
                   </div>
 
                   <motion.div
-                    className="bg-white rounded-lg p-6 border-l-4 border-brand-olive"
+                    className="bg-gradient-to-br from-brand-olive/5 to-brand-clay/10 rounded-xl p-8 border-l-4 border-brand-olive shadow-lg"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.4 }}
+                    whileHover={{ scale: 1.02 }}
                   >
-                    <h4 className="font-bold text-brand-brown mb-2">Etapa actual</h4>
-                    <p className="text-brand-soft-black/80">
-                      Solo 10 lotes en preventa. Obras en marcha. Entrega abril 2026.
-                    </p>
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-brand-olive/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-6 h-6 bg-brand-olive rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-brand-brown text-lg mb-2">Etapa actual</h4>
+                        <p className="text-brand-soft-black/80 leading-relaxed">
+                          Solo <span className="font-bold text-brand-olive">10 lotes</span> en preventa. Obras en
+                          marcha. Entrega <span className="font-bold text-brand-brown">abril 2026</span>.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-brand-olive/20">
+                      <p className="text-sm text-brand-soft-black/70 italic">
+                        "Un proyecto pensado para quienes buscan calidad de vida sin comprometer la inversión."
+                      </p>
+                    </div>
                   </motion.div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </AnimatedSection>
@@ -401,11 +419,11 @@ export default function ElPinarLandingPage() {
                 </div>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                   {[
-                    { icon: Tag, title: "Valor en preventa", text: "Desde U$D 11.000 + 22 cuotas" },
+                    { icon: Tag, title: "Valor en preventa", text: "Desde U$D 20.000" },
                     { icon: Calendar, title: "Entrega estimada", text: "Entrega abril 2026" },
                     { icon: Wrench, title: "Obras ya iniciadas", text: "Obras iniciadas" },
                     { icon: MapPin, title: "Ubicación", text: "A solo 100 km de CABA" },
-                    { icon: Flame, title: "¡Últimos 10 lotes!", text: "Oportunidad única" },
+                    { icon: Flame, title: "¡Últimos 9 lotes!", text: "Oportunidad única" },
                   ].map((item, index) => (
                     <AnimatedCard key={index} delay={index * 0.1} className="h-full group" hoverScale={1.08}>
                       <CardContent className="p-8 bg-gradient-to-br from-brand-sand/80 to-brand-clay/30 border-brand-clay/30 h-full flex flex-col justify-between min-h-[200px] rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
@@ -442,68 +460,18 @@ export default function ElPinarLandingPage() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Visual Map Section */}
-                <motion.div
-                  className="relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <div className="bg-brand-sand/50 rounded-lg p-8 relative overflow-hidden">
-                    {/* Simplified Route Visualization */}
-                    <div className="relative h-64 flex items-center justify-center">
-                      <div className="absolute inset-0 flex items-center">
-                        <motion.div
-                          className="w-full h-1 bg-brand-brown/30 relative"
-                          initial={{ scaleX: 0 }}
-                          whileInView={{ scaleX: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                        >
-                          <motion.div
-                            className="absolute left-0 w-4 h-4 bg-brand-brown rounded-full -top-1.5 flex items-center justify-center"
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.8 }}
-                          >
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                          </motion.div>
-                          <motion.div
-                            className="absolute right-0 w-4 h-4 bg-brand-olive rounded-full -top-1.5 flex items-center justify-center"
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 1 }}
-                          >
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                          </motion.div>
-                        </motion.div>
-                      </div>
-
-                      <motion.div
-                        className="bg-brand-clay text-brand-brown px-4 py-2 rounded-lg font-bold text-lg"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                      >
-                        RUTA 9
-                      </motion.div>
-                    </div>
-
-                    <motion.div
-                      className="text-center mt-4"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 1.6 }}
-                    >
-                      <p className="text-brand-brown font-bold">100 km desde Buenos Aires</p>
-                      <p className="text-brand-soft-black/70">Acceso directo por Ruta 9</p>
-                    </motion.div>
+                <div className="bg-white rounded-lg p-2 shadow-lg">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3305.2670973659424!2d-59.21133330000001!3d-34.0626667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDAzJzQ1LjYiUyA1OcKwMTInNDAuOCJX!5e0!3m2!1ses!2sar!4v1753973276895!5m2!1ses!2sar"
+                      width="100%"
+                      height="500px"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-80 md:h-96 lg:h-[500px] rounded"
+                    />
                   </div>
-                </motion.div>
 
                 {/* Location Benefits */}
                 <div className="space-y-6">
@@ -733,7 +701,7 @@ export default function ElPinarLandingPage() {
             >
               <h2 className="font-serif text-4xl font-bold md:text-5xl">Tu lugar en el mundo te está esperando</h2>
               <p className="mt-4 max-w-4xl mx-auto text-lg">
-                Quedan solo 10 lotes en esta etapa. No te quedes afuera. Es ahora.
+                Quedan solo 9 lotes en esta etapa. No te quedes afuera. Es ahora.
               </p>
               <motion.div
                 className="mt-8 flex flex-col gap-4 sm:flex-row justify-center"
@@ -833,7 +801,7 @@ export default function ElPinarLandingPage() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-6">
                 <div>
-                  <p className="text-brand-sand font-bold text-lg">¡Solo quedan 10 lotes!</p>
+                  <p className="text-brand-sand font-bold text-lg">¡Solo quedan 9 lotes!</p>
                   <p className="text-brand-clay text-sm">Desde U$D 11.000 + financiación</p>
                 </div>
                 <div className="h-8 w-px bg-brand-clay/30"></div>

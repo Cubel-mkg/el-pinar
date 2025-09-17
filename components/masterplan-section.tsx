@@ -44,7 +44,7 @@ export function MasterplanSection() {
                 <li className="flex items-start gap-3">
                   <Badge className="bg-brand-olive/10 text-brand-olive">✓</Badge>
                   <span>
-                    <strong>60 lotes</strong> de 950 m² cada uno
+                    <strong>110 lotes</strong> de 950 m² cada uno
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -77,7 +77,7 @@ export function MasterplanSection() {
             <div className="bg-white rounded-lg p-6 border-l-4 border-brand-olive">
               <h4 className="font-bold text-brand-brown mb-2">Etapa actual</h4>
               <p className="text-brand-soft-black/80">
-                <strong>Fase 1:</strong> 10 lotes disponibles en preventa con todas las obras de infraestructura
+                <strong>Fase 1:</strong> 9 lotes disponibles en preventa con todas las obras de infraestructura
                 iniciadas. Entrega estimada abril 2026.
               </p>
             </div>
