@@ -138,7 +138,14 @@ export default function ElPinarLandingPage() {
               </Link>
             </nav>
             <motion.div whileHover={{ scale: 1.08, y: -2 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-[#25D366] text-white hover:bg-[#25D366]/90 md:inline-flex">
+              <Button className="bg-[#25D366] text-white hover:bg-[#25D366]/90 md:inline-flex"
+                onClick={() =>
+                window.open(
+                  "https://wa.me/5491173585559",
+                  "_blank"
+                )
+                }
+              >
                 <WhatsAppLogo className="h-4 w-4 mr-2" />
                 WhatsApp
               </Button>
@@ -414,7 +421,16 @@ export default function ElPinarLandingPage() {
                     Invertí hoy. Viví para siempre. Una zona con futuro y el precio del momento.
                   </p>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="mt-8 bg-brand-brown text-white hover:bg-brand-brown/90">Reservar ahora</Button>
+                    <Button className="mt-8 bg-brand-brown text-white hover:bg-brand-brown/90"onClick={() =>
+                      window.open(
+                        "https://wa.me/5491173585559",
+                        "_blank"
+                      )
+                      }
+                    >
+                      Reservar ahora  
+                    </Button>
+
                   </motion.div>
                 </div>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
@@ -711,20 +727,32 @@ export default function ElPinarLandingPage() {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <motion.div whileHover={{ scale: 1.08, y: -2 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" className="bg-brand-olive text-white hover:bg-brand-olive/90">
+                  <Button size="lg" className="bg-brand-olive text-white hover:bg-brand-olive/90"onClick={() =>
+                    window.open(
+                      "https://wa.me/5491173585559",
+                      "_blank"
+                    )
+                    }
+                  >
                     <WhatsAppLogo className="h-5 w-5 mr-2" />
                     Reservar por WhatsApp
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.08, y: -2 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-brand-brown bg-transparent"
-                  >
-                    <Phone className="h-5 w-5 mr-2" />
-                    Llamar ahora
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-brand-brown bg-transparent"
+                      onClick={() =>
+                      window.open(
+                        "https://wa.me/5491173585559",
+                        "_blank"
+                      )
+                      }
+                    >
+                      <Phone className="h-5 w-5 mr-2" />
+                      Llamar ahora
+                    </Button>
                 </motion.div>
               </motion.div>
               <motion.div
@@ -815,6 +843,13 @@ export default function ElPinarLandingPage() {
                   <Button
                     size="lg"
                     className="bg-brand-olive text-white hover:bg-brand-olive/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                    onClick={() =>
+                    window.open(
+                      "https://wa.me/5491173585559",
+                      "_blank"
+                    )
+                    }
+              
                   >
                     <WhatsAppLogo className="h-5 w-5 mr-2" />
                     Reservar Ahora

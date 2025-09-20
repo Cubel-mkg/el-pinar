@@ -86,7 +86,14 @@ export function AnimatedHero() {
 
         <motion.div className="mt-8 flex flex-col gap-4 sm:flex-row" variants={itemVariants}>
           <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
-            <Button size="lg" className="bg-brand-olive text-white hover:bg-brand-olive/90">
+            <Button size="lg" className="bg-brand-olive text-white hover:bg-brand-olive/90"
+              onClick={() =>
+              window.open(
+                "https://wa.me/5491173585559",
+                "_blank"
+              )
+              }
+            >
               Reservá tu lote hoy
             </Button>
           </motion.div>
@@ -95,6 +102,12 @@ export function AnimatedHero() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-brand-brown bg-transparent"
+              onClick={() =>
+                  window.open(
+                    "https://wa.me/5491173585559",
+                    "_blank"
+                  )
+                  }
             >
               Quiero más info
             </Button>
