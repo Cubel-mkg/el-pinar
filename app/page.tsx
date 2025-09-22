@@ -798,9 +798,8 @@ export default function ElPinarLandingPage() {
         </motion.footer>
                       
         {/* Floating WhatsApp Button */}
-        {/*  
         <motion.div
-          className="fixed bottom-6 right-6 z-50"
+          className="hidden md:block fixed bottom-6 right-6 z-50"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -808,7 +807,7 @@ export default function ElPinarLandingPage() {
           whileTap={{ scale: 0.9 }}
         >
           <Link
-            href="https://wa.me/5491123456789"
+            href="https://wa.me/5491173585559"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
@@ -818,7 +817,6 @@ export default function ElPinarLandingPage() {
             <span className="sr-only">Contactanos por WhatsApp</span>
           </Link>
         </motion.div>
-        */}
 
         {/* Sticky CTA Bar - Desktop Only */}
         <motion.div
