@@ -796,8 +796,9 @@ export default function ElPinarLandingPage() {
             </div>
           </div>
         </motion.footer>
-
+                      
         {/* Floating WhatsApp Button */}
+        {/*  
         <motion.div
           className="fixed bottom-6 right-6 z-50"
           initial={{ scale: 0, opacity: 0 }}
@@ -817,6 +818,7 @@ export default function ElPinarLandingPage() {
             <span className="sr-only">Contactanos por WhatsApp</span>
           </Link>
         </motion.div>
+        */}
 
         {/* Sticky CTA Bar - Desktop Only */}
         <motion.div
