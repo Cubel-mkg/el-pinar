@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, DM_Serif_Display } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
+import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        {/* Google Ads / Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17630532537"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17630532537');
+          `}
+        </Script>
+        <Script id="organization-schema" type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Barrio Abierto El Pinar",
+              "url": "https://www.barrioelpinar.com",
+              "logo": "https://www.barrioelpinar.com/logo.png"
+            }
+          `}
+        </Script>
+      </head>
       <body className={cn("antialiased", inter.variable, dmSerifDisplay.variable)}>{children}</body>
     </html>
   )
