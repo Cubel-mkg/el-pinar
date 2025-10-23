@@ -55,6 +55,11 @@ export default function RootLayout({
               "name": "Barrio Abierto El Pinar",
               "url": "https://www.barrioelpinar.com",
               "logo": "https://www.barrioelpinar.com/logo.png",
+              "description": "",
+              "sameAs": [
+                "https://www.facebook.com/barrioelpinar",
+                "https://www.instagram.com/barrioelpinar"
+              ]
             }),
           }}
         />
