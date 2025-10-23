@@ -45,17 +45,19 @@ export default function RootLayout({
             gtag('config', 'AW-17630532537');
           `}
         </Script>
-        <Script id="organization-schema" type="application/ld+json">
-          {`
-            {
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Barrio Abierto El Pinar",
               "url": "https://www.barrioelpinar.com",
-              "logo": "https://www.barrioelpinar.com/logo.png"
-            }
-          `}
-        </Script>
+              "logo": "https://www.barrioelpinar.com/logo.png",
+            }),
+          }}
+        />
       </head>
       <body className={cn("antialiased", inter.variable, dmSerifDisplay.variable)}>{children}</body>
     </html>
