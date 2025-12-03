@@ -141,7 +141,7 @@ export default function ElPinarLandingPage() {
               <Button className="bg-[#25D366] text-white hover:bg-[#25D366]/90 md:inline-flex"
                 onClick={() =>
                 window.open(
-                  "https://wa.me/5491173585559",
+                  "https://wa.me/5491173585559?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20m%C3%A1s%20info%20de%20los%20lotes",
                   "_blank"
                 )
                 }
@@ -423,7 +423,7 @@ export default function ElPinarLandingPage() {
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button className="mt-8 bg-brand-brown text-white hover:bg-brand-brown/90"onClick={() =>
                       window.open(
-                        "https://wa.me/5491173585559",
+                        "https://wa.me/5491173585559?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20m%C3%A1s%20info%20de%20los%20lotes",
                         "_blank"
                       )
                       }
@@ -745,7 +745,7 @@ export default function ElPinarLandingPage() {
                       className="border-white text-white hover:bg-white hover:text-brand-brown bg-transparent"
                       onClick={() =>
                       window.open(
-                        "https://wa.me/5491173585559",
+                        "https://wa.me/5491173585559?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20m%C3%A1s%20info%20de%20los%20lotes",
                         "_blank"
                       )
                       }
@@ -762,7 +762,7 @@ export default function ElPinarLandingPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <span>📞 +54 11 2345-6789</span>
+                <span>📞 +54 11 7358-5559</span>
                 <span>📧 info@barrioabiertoelpinar.com</span>
               </motion.div>
             </motion.div>
@@ -807,7 +807,7 @@ export default function ElPinarLandingPage() {
           whileTap={{ scale: 0.9 }}
         >
           <Link
-            href="https://wa.me/5491173585559"
+            href="https://wa.me/5491173585559?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20m%C3%A1s%20info%20de%20los%20lotes"
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
